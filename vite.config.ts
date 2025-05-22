@@ -1,11 +1,13 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import typescript from "@rollup/plugin-typescript";
 import { resolve } from "path";
+import dts from 'vite-plugin-dts'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), dts({
+      tsconfigPath: resolve(__dirname, "tsconfig.lib.json"),
+    }),],
   build: {
     lib: {
       entry: resolve(__dirname, "lib/main.tsx"),
@@ -17,14 +19,6 @@ export default defineConfig({
         assetFileNames: "assets/[name][extname]",
         entryFileNames: "[name].js",
       },
-      plugins: [
-        typescript({
-          tsconfig: "./tsconfig.app.json",
-          exclude: ["**/*.test.tsx", "**/*.test.ts", "**/*.stories.ts"],
-          declaration: true,
-          declarationDir: "dist",
-        }),
-      ],
     },
     copyPublicDir: false,
   },
