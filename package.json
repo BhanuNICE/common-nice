@@ -1,5 +1,5 @@
 {
-  "name": "common-nice",
+  "name": "@bhanu/common-nice",
   "version": "0.0.1",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -7,7 +7,7 @@
   "files": [
     "dist"
   ],
-  "repository": "git://github.com/shumsonk-v-tpit/my-react-lib.git",
+  "repository": "git://github.com/BhanuNICE/common-nice.git",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
