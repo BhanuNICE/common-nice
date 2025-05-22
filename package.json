@@ -7,6 +7,10 @@
   "files": [
     "dist"
   ],
+  "repository": "git://github.com/shumsonk-v-tpit/my-react-lib.git",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "dev": "rollup -c --watch",
     "build": "rollup -c",
